@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from cruds import login_message
+from cruds import home_page, login_message
 
 app = FastAPI()
 
@@ -14,7 +14,8 @@ def get_login_message():
 
 @app.get('/home')
 def get_home_page():
-    return "this is home page"
+    response = home_page()
+    return response
 
 
 @app.get('/careers')
