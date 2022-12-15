@@ -7,8 +7,8 @@ app = FastAPI()
 
 
 @app.get('/login')
-async def get_login_message():
-    response = await login_message()
+def get_login_message():
+    response = login_message()
     return response
 
 
